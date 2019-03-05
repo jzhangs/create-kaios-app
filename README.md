@@ -27,17 +27,17 @@ my-app
 ├── package.json
 ├── .gitignore
 ├── public
-│   ├── favicon.ico
+│   ├── icons
 │   ├── index.html
-│   └── manifest.json
+│   └── manifest.webapp
 └── src
-    ├── App.css
-    ├── App.js
-    ├── App.test.js
+    ├── view
+    |   |── app.css
+    |   ├── app.js
+    |   ├── app.test.js
     ├── index.css
     ├── index.js
     ├── logo.svg
-    └── serviceWorker.js
 ```
 
 No configuration or complicated folder structures, just the files you need to build your app. Once the installation is done, you can open your project folder:
