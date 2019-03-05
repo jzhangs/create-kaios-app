@@ -1,8 +1,8 @@
 # Create KaiOS App
 
-Forked from [facebook/create-react-app](https://github.com/facebook/create-react-app), Create KaiOS App helps to build a [KaiOS](https://www.kaiostech.com/) app quickly based on react and kaios designed ui components. You may need a KaiOS device such as `Nokia 8810 4G`(debug enabled) or a [KaiOS Simulator](https://developer.kaiostech.com/simulator) to check specific app behaviors, though Firefox Browser is also a good choice.
+Forked from [facebook/create-react-app](https://github.com/facebook/create-react-app), Create KaiOS App helps to build a [KaiOS](https://www.kaiostech.com/) app quickly based on react and kaios designed ui components. You may need a KaiOS device such as `Nokia 8810 4G`(debug enabled) or a [KaiOS Simulator](https://developer.kaiostech.com/simulator) to check specific app behaviors. Firefox Browser is also a good choice.
 
-Original README is renamed [README_React.md](README_React.md), check it for more details.
+Original README is renamed to [README_REACT.md](README_REACT.md), check it for more details.
 
 ## Creating an App
 
