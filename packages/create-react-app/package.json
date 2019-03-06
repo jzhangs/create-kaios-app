@@ -1,17 +1,17 @@
 {
-  "name": "create-react-app",
-  "version": "2.1.5",
+  "name": "create-kaios-app",
+  "version": "0.0.1",
   "keywords": [
-    "react"
+    "kaios", "react"
   ],
-  "description": "Create React apps with no build configuration.",
-  "repository": "facebook/create-react-app",
+  "description": "Create KaiOS apps with no build configuration.",
+  "repository": "kaios-design/create-kaios-app",
   "license": "MIT",
   "engines": {
     "node": ">=4"
   },
   "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
+    "url": "https://github.com/kaios-design/create-kaios-app/issues"
   },
   "files": [
     "index.js",
@@ -19,7 +19,7 @@
     "yarn.lock.cached"
   ],
   "bin": {
-    "create-react-app": "./index.js"
+    "create-kaios-app": "./index.js"
   },
   "dependencies": {
     "chalk": "1.1.3",

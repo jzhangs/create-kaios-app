@@ -53,7 +53,7 @@ function tryGitInit(appPath) {
     didInit = true;
 
     execSync('git add -A', { stdio: 'ignore' });
-    execSync('git commit -m "Initial commit from Create React App"', {
+    execSync('git commit -m "Initial commit from Create KaiOS App"', {
       stdio: 'ignore',
     });
     return true;
@@ -95,11 +95,11 @@ module.exports = function(
 
   // Setup the script rules
   appPackage.scripts = {
-    start: 'react-scripts start',
-    build: 'react-scripts build',
-    push: 'react-scripts push',
-    test: 'react-scripts test',
-    eject: 'react-scripts eject',
+    start: 'kaios-scripts start',
+    build: 'kaios-scripts build',
+    push: 'kaios-scripts push',
+    test: 'kaios-scripts test',
+    eject: 'kaios-scripts eject',
   };
 
   // Setup the eslint config

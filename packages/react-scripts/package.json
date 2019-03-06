@@ -1,14 +1,14 @@
 {
-  "name": "react-scripts",
-  "version": "2.1.5",
-  "description": "Configuration and scripts for Create React App.",
-  "repository": "facebook/create-react-app",
+  "name": "kaios-scripts",
+  "version": "0.0.1",
+  "description": "Configuration and scripts for Create KaiOS App.",
+  "repository": "kaios-design/create-kaios-app",
   "license": "MIT",
   "engines": {
     "node": ">=6"
   },
   "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
+    "url": "https://github.com/kaios-design/create-kaios-app/issues"
   },
   "files": [
     "bin",
@@ -20,7 +20,7 @@
     "utils"
   ],
   "bin": {
-    "react-scripts": "./bin/react-scripts.js"
+    "kaios-scripts": "./bin/react-scripts.js"
   },
   "types": "./lib/react-app.d.ts",
   "dependencies": {
