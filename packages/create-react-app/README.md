@@ -18,5 +18,11 @@ To create and install app to a KaiOS device is as simple as below:
 ```
 yarn create kaios-app my-app
 cd my-app && yarn build
-yarn push                       // The device should be adb attached and run adbd as root.
+yarn push
+```
+
+The default template is written in pure javascript. You may also create a react app by,
+
+```
+yarn create kaios-app my-app --react
 ```

@@ -13,7 +13,7 @@ Template app and some util scripts are modified from react-scripts.
 
 ### Template
 
-The template shows KaiOS logo, including `icons/` for launcher icons and [manifest.webapp](https://developer.kaiostech.com/first-app/manifest) following B2G OS style. (Slightly different from previous manifest.json)
+The react template shows KaiOS logo, including `icons/` for launcher icons and [manifest.webapp](https://developer.kaiostech.com/first-app/manifest) following B2G OS style. (Slightly different from previous manifest.json)
 
 ```
 my-app
