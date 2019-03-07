@@ -243,6 +243,9 @@ module.exports = function(
     '    and scripts into the app directory. If you do this, you can’t go back!'
   );
   console.log();
+  console.log(chalk.cyan(`  ${displayedCommand} push`));
+  console.log('    Installs the app after `yarn build` to KaiOS devices.');
+  console.log();
   console.log('We suggest that you begin by typing:');
   console.log();
   console.log(chalk.cyan('  cd'), cdpath);
