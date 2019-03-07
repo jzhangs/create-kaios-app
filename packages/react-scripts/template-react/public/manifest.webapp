@@ -1,0 +1,23 @@
+{
+  "name": "KaiOS",
+  "description": "KaiOS",
+  "version": "0.0.1",
+  "launch_path": "/index.html",
+  "type": "privileged",
+  "default_locale": "en-US",
+  "theme_color": "#a065e6",
+  "locales": {
+    "en-US": {
+      "name": "KaiOS",
+      "description": "KaiOS"
+    }
+  },
+  "icons": {
+    "56": "/icons/app_56.png",
+    "112": "/icons/app_112.png"
+  },
+  "chrome": {
+    "statusbar": "overlap"
+  },
+  "orientation": "default"
+}

@@ -16,6 +16,7 @@
     "lib",
     "scripts",
     "template",
+    "template-react",
     "template-typescript",
     "utils"
   ],

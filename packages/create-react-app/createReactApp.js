@@ -77,6 +77,7 @@ const program = new commander.Command(packageJson.name)
   )
   .option('--use-npm')
   .option('--use-pnp')
+  .option('--react')
   .option('--typescript')
   .allowUnknownOption()
   .on('--help', () => {
@@ -180,6 +181,7 @@ createApp(
   program.scriptsVersion,
   program.useNpm,
   program.usePnp,
+  program.react,
   program.typescript,
   hiddenProgram.internalTestingTemplate
 );
@@ -190,6 +192,7 @@ function createApp(
   version,
   useNpm,
   usePnp,
+  useReact,
   useTypescript,
   template
 ) {
@@ -202,7 +205,7 @@ function createApp(
     process.exit(1);
   }
 
-  console.log(`Creating a new React app in ${chalk.green(root)}.`);
+  console.log(`Creating a new KaiOS app in ${chalk.green(root)}.`);
   console.log();
 
   const packageJson = {
@@ -283,6 +286,7 @@ function createApp(
     template,
     useYarn,
     usePnp,
+    useReact,
     useTypescript
   );
 }
@@ -367,10 +371,15 @@ function run(
   template,
   useYarn,
   usePnp,
+  useReact,
   useTypescript
 ) {
   const packageToInstall = getInstallPackage(version, originalDirectory);
-  const allDependencies = ['react', 'react-dom', packageToInstall];
+  const allDependencies = [packageToInstall];
+  if (useReact) {
+    allDependencies.push('react', 'react-dom');
+  }
+
   if (useTypescript) {
     // TODO: get user's node version instead of installing latest
     allDependencies.push(
@@ -393,11 +402,16 @@ function run(
     .then(info => {
       const isOnline = info.isOnline;
       const packageName = info.packageName;
-      console.log(
-        `Installing ${chalk.cyan('react')}, ${chalk.cyan(
-          'react-dom'
-        )}, and ${chalk.cyan(packageName)}...`
-      );
+      if (useReact) {
+        console.log(
+          `Installing ${chalk.cyan('react')}, ${chalk.cyan(
+            'react-dom'
+          )}, and ${chalk.cyan(packageName)}...`
+        );
+      } else {
+        console.log(`Installing ${chalk.cyan(packageName)}... `);
+      }
+
       console.log();
 
       return install(
@@ -411,7 +425,7 @@ function run(
     })
     .then(async packageName => {
       checkNodeVersion(packageName);
-      setCaretRangeForRuntimeDeps(packageName);
+      setCaretRangeForRuntimeDeps(packageName, useReact);
 
       const pnpPath = path.resolve(process.cwd(), '.pnp.js');
 
@@ -712,7 +726,7 @@ function makeCaretRange(dependencies, name) {
   dependencies[name] = patchedVersion;
 }
 
-function setCaretRangeForRuntimeDeps(packageName) {
+function setCaretRangeForRuntimeDeps(packageName, useReact) {
   const packagePath = path.join(process.cwd(), 'package.json');
   const packageJson = require(packagePath);
 
@@ -727,8 +741,10 @@ function setCaretRangeForRuntimeDeps(packageName) {
     process.exit(1);
   }
 
-  makeCaretRange(packageJson.dependencies, 'react');
-  makeCaretRange(packageJson.dependencies, 'react-dom');
+  if (useReact) {
+    makeCaretRange(packageJson.dependencies, 'react');
+    makeCaretRange(packageJson.dependencies, 'react-dom');
+  }
 
   fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2) + os.EOL);
 }

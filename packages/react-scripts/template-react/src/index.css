@@ -1,0 +1,13 @@
+html {
+  font-size: 10px;
+  font-family: 'Open Sans';
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  text-align: center;
+}

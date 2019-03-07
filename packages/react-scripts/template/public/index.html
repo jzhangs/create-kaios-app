@@ -9,13 +9,25 @@
     <title>KaiOS App</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <header class="app-header">
+        <img src="./logo.svg" class="app-logo" alt="logo" />
+        <p>Edit "index.[html|js]" and save to reload.</p>
+        <a
+          id="app-link"
+          class="app-link"
+          href="https://developer.kaiostech.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn KaiOS
+        </a>
+      </header>
+    </div>
     <!--
       This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+      The build step will place the bundled scripts under 'src/' folder into
+      the <body> tag.
 
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.

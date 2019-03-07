@@ -13,7 +13,7 @@ We recommend using yarn to create kaios app, though npx and npm should also work
 ### Yarn
 
 ```sh
-yarn create kaios-app my-app
+yarn create kaios-app my-app --react
 ```
 
 _`yarn create` is available in Yarn 0.25+_
