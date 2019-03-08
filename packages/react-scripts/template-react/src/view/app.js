@@ -13,18 +13,17 @@ class App extends Component {
       <>
         <header className="app-header">
           <img src={logo} className="app-logo" alt="logo" />
-          <p>Edit "view/app.js" and save to reload.</p>
+          <p data-l10n-id="app-description" />
           <a
             className="app-link"
+            data-l10n-id="app-link"
             href="https://developer.kaiostech.com/"
             target="_blank"
             rel="noopener noreferrer"
             ref={node => {
               this.anchor = node;
             }}
-          >
-            Learn KaiOS
-          </a>
+          />
         </header>
       </>
     );

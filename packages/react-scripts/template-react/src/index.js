@@ -1,3 +1,5 @@
+// import l10n.js before react modules
+import 'kaios-gaia-l10n';
 import React from 'react';
 import ReactDOM from 'react-dom';
 

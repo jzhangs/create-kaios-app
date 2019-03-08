@@ -6,7 +6,17 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <meta name="defaultLanguage" content="en-US" />
+    <meta name="availableLanguages" content="en-US, zh-CN" />
+
     <title>KaiOS App</title>
+    <!--
+      The following line is for loading the localization data. The localization library
+      `l10n.js` https://github.com/kaios-design/gaia-l10n
+      would be bundled and loaded later. As long as you provide translations
+      in the properties files, people can use the app in their own language.
+    -->
+    <link rel="localization" href="/locales/template.{locale}.properties" />
   </head>
   <body>
     <div id="app"></div>

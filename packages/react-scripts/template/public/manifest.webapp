@@ -1,23 +1,34 @@
 {
   "name": "KaiOS",
-  "description": "KaiOS",
+  "description": "Demonstrates a basic KaiOS app",
   "version": "0.0.1",
-  "launch_path": "/index.html",
-  "type": "privileged",
-  "default_locale": "en-US",
-  "theme_color": "#a065e6",
-  "locales": {
-    "en-US": {
-      "name": "KaiOS",
-      "description": "KaiOS"
-    }
+  "developer": {
+    "name": "Your name",
+    "url": "http://example.com"
   },
-  "icons": {
+  "launch_path": "/index.html",
+    "icons": {
     "56": "/icons/app_56.png",
     "112": "/icons/app_112.png"
+  },
+  "theme_color": "#a065e6",
+  "type": "privileged",
+  "permissions": {
+    "systemXHR": {}
   },
   "chrome": {
     "statusbar": "overlap"
   },
-  "orientation": "default"
+  "orientation": "default",
+  "locales": {
+    "en-US": {
+      "name": "Template",
+      "description": "Template App for KaiOS"
+    },
+    "zh-CN": {
+      "name": "模板",
+      "description": "KaiOS模板应用"
+    }
+  },
+  "default_locale": "en-US"
 }
